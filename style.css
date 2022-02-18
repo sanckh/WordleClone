@@ -1,0 +1,104 @@
+* {
+    color: #ffffff;
+}
+
+body {
+    background-color: #121213;
+}
+
+.title-container {
+    text-align: center;
+    width: 510px;
+    border-bottom: solid 1px #3a3a3c;
+    /*    this will give us a nice line and width for our game header*/
+}
+
+.game-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*   height is around 90%. create flex box to stack. stack in columns. justify content so the "space between" is even. align everything in the center*/
+}
+
+.key-container {
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+/*   larger keyboard. everything in here will wrap over each other */
+}
+.key-container button {
+    width: 43px;
+    height: 58px;
+    border-radius: 4px;
+    border: none;
+    background-color: #818384;
+    margin: 4px;
+}
+.key-container button:nth-child(20),
+.key-container button:nth-child(28){
+width: 68px;
+}
+.key-container button:nth-child(11){
+    margin-left: 30px;
+}
+
+
+.message-container {
+height: 30px; /* because of tile containers margin bottom*/
+}
+
+.tile-container {
+    width: 330px;
+    margin-bottom: 30px;
+    /*    width of the tiles, and margin so it has a nicer look and feel*/
+}
+.tile-container div{
+    display: flex; /* appear next to each other instead of one giant column*/
+}
+.tile-container .tile{
+    width: 62px;
+    height: 62px;
+    border: 2px solid#3a3a3c;
+    box-sizing: border-box; /* border goes on the inside*/
+    display: flex;
+    justify-content: center;
+    align-items: center; /* ensures everything is centered*/
+    margin: 2px; /* center everything and space it out */
+}
+
+.message-container p {
+    background-color: #818384;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+}
+.tile.flip{
+    animation: 0.5s linear flipping;
+}
+@keyframes flipping {
+   0% {
+       transform: rotateX(0deg);
+   }
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+.grey-overlay{
+    background-color: #3a3a3c !important;
+    border:none !important;
+}
+.yellow-overlay{
+    background-color: #b59f3a !important;
+    border:none !important;
+}
+.green-overlay{
+    background-color: #538d4e !important;
+    border:none !important;
+}
+
+
