@@ -58,7 +58,7 @@ Tutorial Video:
        3. add else statement
           1. inside else statement if current row is greater than five, show message game over
           2. inside else statement if currentrow is less than 5, increment currentrow and set current tile to 0
-       4. add colors function
+       4. add colortokey function
           1. add style to green overlay, grey, and yellow
           2. !important will overwrite the order is important
        5. add else if and else for other colors
@@ -67,4 +67,10 @@ Tutorial Video:
        8. create flip styling
        9. add a setTimeout function to flipTile
        10. create let checkWordle and guess 
-       11. 
+       11. change fliptile to updated flip tile
+       12. create backend
+           1. create index.js
+           2. npm install axios, cors, nodemon, express, dotenv
+           3. inside package.json
+              1. inside scripts add: start:backend
+           4. fill out index.js
